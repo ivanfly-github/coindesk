@@ -24,6 +24,7 @@ public class InterceptorAppConfig implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler(api_docs_path);
 		registry.addResourceHandler(swagger_ui_path);
+		registry.addResourceHandler("/static/**").addResourceLocations("/static/","classpath:/static/");
 	}
 	
 	@Override
